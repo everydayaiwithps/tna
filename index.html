@@ -405,8 +405,28 @@
     font-weight: 700;
     cursor: pointer;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     letter-spacing: 0.01em;
+  }
+
+  .trainer-card-link {
+    display: block;
+    text-align: center;
+    width: 100%;
+    background: var(--accent-lt);
+    color: var(--navy);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 11px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .trainer-card-link:hover {
+    border-color: var(--navy);
+    background: #fff;
   }
 
   .thankyou-box {
@@ -485,6 +505,12 @@
       identifiers, or individual responses are stored or transmitted at any
       point. The AI Triple T (aittt.app) tool is completely free to use for
       pre-AI-literacy intervention/training diagnosis.</em>
+      <br><br>
+      Facilitating a session? Open the
+      <a href="https://aittt.app/trainer-ref-card" target="_blank" rel="noopener">
+        AIT3 Trainer Reference Card
+      </a>
+      to match each readiness code to a session design direction.
     </div>
 
     <div class="header-pills">
@@ -697,6 +723,10 @@
   </div>
 
   <button class="show-trainer">&#128073;&nbsp; Show this screen to your trainer now</button>
+
+  <a href="https://aittt.app/trainer-ref-card" target="_blank" rel="noopener" class="trainer-card-link">
+    &#128290;&nbsp; Trainer? Open the Reference Card &rarr;
+  </a>
 
   <div class="thankyou-box">
     <h2>Thank you &mdash; you did great.</h2>
