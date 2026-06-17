@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIT3 Trainer Reference Card</title>
+<meta name="description" content="Print-ready reference card for trainers using the AIT3 readiness instrument. Maps each readiness code to a session design direction.">
+<style>
+  :root {
+    --navy:      #1B2A4A;
+    --navy-lt:   #243659;
+    --gold:      #E8A020;
+    --ink:       #1A202C;
+    --mid:       #4A5568;
+    --pale:      #718096;
+    --bg:        #F7F8FC;
+    --card:      #FFFFFF;
+    --accent-lt: #EEF1F8;
+    --border:    #DDE2EE;
+    --radius:    10px;
+    --sans:      'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.55;
+    padding-bottom: 50px;
+  }
+
+  header {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-lt) 100%);
+    color: #fff;
+    padding: 26px 20px 22px;
+  }
+  .header-inner { max-width: 880px; margin: 0 auto; }
+  .header-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  header h1 {
+    font-size: clamp(20px, 4.5vw, 26px);
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  header p {
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.82);
+    max-width: 680px;
+    line-height: 1.6;
+  }
+  .back-link {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 12.5px;
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(232,160,32,0.4);
+  }
+
+  main {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 24px 16px 0;
+  }
+
+  .legend {
+    background: var(--accent-lt);
+    border-left: 3px solid var(--navy);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 14px 16px;
+    font-size: 13px;
+    color: var(--mid);
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+  .legend strong { color: var(--ink); }
+  .legend code {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-size: 12px;
+  }
+
+  .card-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .code-card {
+    background: var(--card);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 18px 16px;
+  }
+  .code-card.code-light { border-left: 4px solid #2F9E6E; }
+  .code-card.code-moderate { border-left: 4px solid var(--gold); }
+  .code-card.code-extensive { border-left: 4px solid #C0392B; }
+
+  .code-head {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .code-tag {
+    font-family: 'Courier New', monospace;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--navy);
+    background: var(--accent-lt);
+    border-radius: 6px;
+    padding: 2px 9px;
+  }
+  .code-profile {
+    font-size: 13.5px;
+    color: var(--mid);
+  }
+
+  .code-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  @media (max-width: 560px) {
+    .code-body { grid-template-columns: 1fr; }
+  }
+
+  .code-col h4 {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--pale);
+    margin-bottom: 4px;
+  }
+  .code-col p {
+    font-size: 13px;
+    color: var(--ink);
+    line-height: 1.55;
+  }
+  .focus-col h4 { color: #2F7E52; }
+  .skip-col h4 { color: #B0454A; }
+
+  .ordering-note {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    font-size: 12.5px;
+    color: var(--mid);
+    line-height: 1.6;
+    margin-top: 20px;
+  }
+  .ordering-note strong { color: var(--ink); }
+
+  footer {
+    max-width: 880px;
+    margin: 30px auto 0;
+    padding: 0 16px;
+    font-size: 11.5px;
+    color: var(--pale);
+    line-height: 1.7;
+    text-align: center;
+  }
+  footer a { color: var(--navy); text-decoration: underline; }
+
+  @media print {
+    header { background: #fff !important; color: var(--ink) !important; }
+    .header-tag, header p, .back-link { color: var(--mid) !important; }
+    body { background: #fff; }
+    .code-card { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-tag">AIT3 &mdash; AI Train The Teacher</div>
+    <h1>Trainer Reference Card</h1>
+    <p>
+      Print this page and keep it as a session planning reference. After
+      collecting codes from the AIT3 readiness check, tally the first
+      letters to identify the room's effort level, then use the matching
+      card below to set the session agenda.
+    </p>
+    <a href="https://aittt.app" class="back-link">&larr; Back to the AIT3 readiness check</a>
+  </div>
+</header>
+
+<main>
+
+  <div class="legend">
+    <strong>Code structure:</strong> <code>X-YYYYY</code> where
+    <code>X</code> is the effort letter
+    (<strong>E</strong> = Extensive: 3+ dimensions attend;
+    <strong>M</strong> = Moderate: 1&ndash;2 attend;
+    <strong>L</strong> = Light: all skip), and each <code>Y</code>
+    position is <code>A</code> (Attend: mean &le; 5.7, a gap exists) or
+    <code>S</code> (Skip: mean &gt; 5.7, near ceiling).
+    <strong>Dimension order:</strong> AISE (AI self-efficacy), PU (perceived
+    usefulness), PEOU (perceived ease of use), PE (perceived enjoyment),
+    BI (behavioural intention).
+  </div>
+
+  <div class="card-grid">
+
+    <div class="code-card code-extensive">
+      <div class="code-head">
+        <span class="code-tag">E-AAAAA</span>
+        <span class="code-profile">All five dimensions show a gap &mdash; low confidence, low perceived value, poor access, low motivation, no clear intention to use AI.</span>
+      </div>
+      <div class="code-body">
+        <div class="code-col focus-col">
+          <h4>Intervention Focus</h4>
+          <p>Start with a single low-stakes task using familiar curriculum content. Build one visible success before adding complexity. Use paired activities so no teacher works alone. Address anxiety explicitly &mdash; normalise struggling with new tools. Sequence strictly: confidence first, usefulness second, commitment last.</p>
+        </div>
+        <div class="code-col skip-col">
+          <h4>Deprioritise</h4>
+          <p>Theory, slides, policy rationale, and ethics modules. Do not ask teachers to share outputs publicly. Do not fast-track &mdash; nothing can be skipped with this cohort.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="code-card code-moderate">
+      <div class="code-head">
+        <span class="code-tag">M-SS<u>A</u>SS</span>
+        <span class="code-profile">PEOU only &mdash; motivated and willing, but finds AI hard to access or integrate with existing teaching tools and workflows.</span>
+      </div>
+      <div class="code-body">
+        <div class="code-col focus-col">
+          <h4>Intervention Focus</h4>
+          <p>Hands-on access is the entire agenda. Map what devices and platforms are available. Walk through one complete AI-assisted task (e.g., a lesson plan draft) using the teacher's own subject content. Show explicitly how AI connects to tools they already use daily. Assign a low-pressure try-it-this-week task before leaving.</p>
+        </div>
+        <div class="code-col skip-col">
+          <h4>Deprioritise</h4>
+          <p>Motivational content, benefit arguments, and case studies. This cohort is already convinced; every minute not spent on hands-on practice is wasted.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="code-card code-moderate">
+      <div class="code-head">
+        <span class="code-tag">M-SSSS<u>A</u></span>
+        <span class="code-profile">BI only &mdash; technically capable, finds AI accessible and enjoyable, but has not committed to using it in actual teaching practice.</span>
+      </div>
+      <div class="code-body">
+        <div class="code-col focus-col">
+          <h4>Intervention Focus</h4>
+          <p>This is an identity and relevance problem, not a skills problem. Connect AI to what each teacher already cares about in their subject. Use peer storytelling &mdash; invite colleagues who do use AI to share one specific classroom example. Co-create one real artefact the teacher will use in their next lesson.</p>
+        </div>
+        <div class="code-col skip-col">
+          <h4>Deprioritise</h4>
+          <p>Technical training and tool navigation. This cohort knows how to use AI; they need a reason to commit, not another demonstration.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="code-card code-moderate">
+      <div class="code-head">
+        <span class="code-tag">M-<u>A</u>SSSS</span>
+        <span class="code-profile">AISE only &mdash; finds AI useful, accessible, and enjoyable, and intends to use it, but lacks confidence in their own ability to operate it effectively.</span>
+      </div>
+      <div class="code-body">
+        <div class="code-col focus-col">
+          <h4>Intervention Focus</h4>
+          <p>Frame AI as an extension of tools teachers already use, not a replacement. Provide scaffolded prompt templates for immediate success. Celebrate imperfect outputs as normal. Pair teachers by subject so confidence is built in a familiar context. Low pressure and high success rate is the design principle.</p>
+        </div>
+        <div class="code-col skip-col">
+          <h4>Deprioritise</h4>
+          <p>Abstract AI theory, ethics modules, and policy sessions. Avoid public sharing of outputs until confidence is established.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="code-card code-light">
+      <div class="code-head">
+        <span class="code-tag">L-SSSSS</span>
+        <span class="code-profile">All five dimensions at or near ceiling &mdash; confident, motivated, finds AI useful and easy, and already committed to using it.</span>
+      </div>
+      <div class="code-body">
+        <div class="code-col focus-col">
+          <h4>Intervention Focus</h4>
+          <p>Commission this cohort as internal AI champions or peer mentors for lower-readiness colleagues. Offer advanced challenges &mdash; prompt engineering, AI output auditing, or cross-subject curriculum co-design. Involve them in designing the school's AI use policy.</p>
+        </div>
+        <div class="code-col skip-col">
+          <h4>Deprioritise</h4>
+          <p>Any standard workshop content. Running a basic session for this group wastes their expertise &mdash; they are more valuable as trainers than as trainees.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="ordering-note">
+    <strong>Two A positions (any M-code):</strong> design two activity blocks, one per gap dimension. Order matters &mdash; address AISE before PEOU (build confidence before drilling tool access), and address PEOU before BI (remove barriers before pushing commitment).
+    <br><br>
+    <strong>Mixed rooms:</strong> if 50% or more of participants share the same effort letter, treat the whole room under that effort level and use the most common dimension pattern to set the session design. If effort letters are genuinely split, design for the highest effort code present &mdash; a session built for E-code participants can still serve M-code participants, but the reverse is unlikely to be true.
+    <br><br>
+    <strong>About TAM:</strong> the Technology Acceptance Model (Davis, 1989) and its TAM3 extension (Venkatesh &amp; Bala, 2008) are among the most widely validated frameworks for understanding technology adoption. The five dimensions here capture attitudinal and motivational facets that are directly actionable in professional development. They are not a complete measure of AI literacy.
+  </div>
+
+</main>
+
+<footer>
+  AIT3 Trainer Reference Card &middot; University of Jyv&auml;skyl&auml;, Finland &middot; Free &middot; No data collected<br>
+  Source: Shenoy &amp; Saarela, ICETC 2026. The 5.7 threshold is a heuristic from a single Bengaluru cohort (n = 44); recalibrate locally if your baseline profiles differ.<br>
+  GenAI-TPD framework: <a href="https://doi.org/10.1007/s44217-026-01579-7" target="_blank" rel="noopener">Discover Education, Springer (2026)</a>
+</footer>
+
+</body>
+</html>
